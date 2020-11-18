@@ -1,0 +1,118 @@
+.body{width:100%;}
+
+#logo {
+    width:100%;
+    height:50%;
+    position: absolute;
+    top: 70px;
+}
+
+input#chat {
+    width: 456px;
+    border: 1px solid #AACAAC;
+}
+
+#container {
+    width: 450px;
+}
+
+#history {
+    height: 180px;
+    border: 1px solid #AACAAC;
+    padding: 5px;
+    font-family: Courier, monospace;
+    font-size: .9em;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+#history p {
+    margin: 0;
+    padding: 0;
+}
+
+#btn_ubBuscaAdmin{
+    position: absolute;
+    top: 500px;
+    left: 5%;
+}
+
+#btn_indexar{
+    position: absolute;
+    top: 500px;
+    left: 35%;
+}
+
+#btn_pesquisaAdmin{
+    position: absolute;
+    top: 500px;
+    left: 60%;
+}
+
+#btn_consultaLinksAdmin{
+    position: absolute;
+    top: 500px;
+    left: 80%;
+}
+
+#btn_consultaHistoricoAdmin{
+    position: absolute;
+    top: 600px;
+    left: 5%;
+}
+
+#btn_promoverUtilizador{
+    position: absolute;
+    top: 600px;
+    left: 35%;
+}
+
+
+#btn_estadoSistema{
+    position: absolute;
+    top: 600px;
+    left: 60%;
+}
+
+
+#btn_logoutAdmin{
+    position: absolute;
+    top: 600px;
+    left: 80%;
+}
+
+#btn_ubBuscaUtil{
+    position: absolute;
+    top: 75%;
+    left: 25%;
+}
+
+#btn_pesquisaUtil{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+}
+
+#btn_pesquisaLinksUtil{
+    position: absolute;
+    top: 75%;
+    left: 75%;
+}
+
+#btn_pesquisaHistoricoUtil{
+    position: absolute;
+    top: 85%;
+    left: 25%;
+}
+
+#btn_logoutUtil{
+    position: absolute;
+    top: 85%;
+    left: 75%;
+}
+
+#notificacoes{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+}

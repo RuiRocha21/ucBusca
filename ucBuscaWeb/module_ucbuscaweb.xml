@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_ucbuscaweb" default="compile.module.ucbuscaweb">
+  <dirname property="module.ucbuscaweb.basedir" file="${ant.file.module_ucbuscaweb}"/>
+  
+  <property name="module.jdk.home.ucbuscaweb" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.ucbuscaweb" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.ucbuscaweb" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.ucbuscaweb" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="ucbuscaweb.output.dir" value="${module.ucbuscaweb.basedir}/out/production/ucBuscaWeb"/>
+  <property name="ucbuscaweb.testoutput.dir" value="${module.ucbuscaweb.basedir}/out/test/ucBuscaWeb"/>
+  
+  <path id="ucbuscaweb.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="ucbuscaweb.module.production.classpath">
+    <path refid="${module.jdk.classpath.ucbuscaweb}"/>
+    <path refid="library.struts2.classpath"/>
+    <path refid="library.javax.websocket:javax.websocket-api:1.1.classpath"/>
+    <path refid="library.xwork-core-2.3.16.3.classpath"/>
+    <path refid="library.json_simple-1.1.classpath"/>
+  </path>
+  
+  <path id="ucbuscaweb.runtime.production.module.classpath">
+    <pathelement location="${ucbuscaweb.output.dir}"/>
+    <path refid="library.struts2.classpath"/>
+    <path refid="library.javax.websocket:javax.websocket-api:1.1.classpath"/>
+    <path refid="library.xwork-core-2.3.16.3.classpath"/>
+    <path refid="library.json_simple-1.1.classpath"/>
+  </path>
+  
+  <path id="ucbuscaweb.module.classpath">
+    <path refid="${module.jdk.classpath.ucbuscaweb}"/>
+    <pathelement location="${ucbuscaweb.output.dir}"/>
+    <path refid="library.struts2.classpath"/>
+    <path refid="library.javax.websocket:javax.websocket-api:1.1.classpath"/>
+    <path refid="library.xwork-core-2.3.16.3.classpath"/>
+    <path refid="library.json_simple-1.1.classpath"/>
+  </path>
+  
+  <path id="ucbuscaweb.runtime.module.classpath">
+    <pathelement location="${ucbuscaweb.testoutput.dir}"/>
+    <pathelement location="${ucbuscaweb.output.dir}"/>
+    <path refid="library.struts2.classpath"/>
+    <path refid="library.javax.websocket:javax.websocket-api:1.1.classpath"/>
+    <path refid="library.xwork-core-2.3.16.3.classpath"/>
+    <path refid="library.json_simple-1.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.ucbuscaweb">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.ucbuscaweb">
+    <patternset refid="excluded.from.module.ucbuscaweb"/>
+  </patternset>
+  
+  <path id="ucbuscaweb.module.sourcepath">
+    <dirset dir="${module.ucbuscaweb.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.ucbuscaweb" depends="compile.module.ucbuscaweb.production,compile.module.ucbuscaweb.tests" description="Compile module ucBuscaWeb"/>
+  
+  <target name="compile.module.ucbuscaweb.production" depends="register.custom.compilers" description="Compile module ucBuscaWeb; production classes">
+    <mkdir dir="${ucbuscaweb.output.dir}"/>
+    <javac2 destdir="${ucbuscaweb.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.ucbuscaweb}/javac">
+      <compilerarg line="${compiler.args.ucbuscaweb}"/>
+      <bootclasspath refid="ucbuscaweb.module.bootclasspath"/>
+      <classpath refid="ucbuscaweb.module.production.classpath"/>
+      <src refid="ucbuscaweb.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.ucbuscaweb"/>
+    </javac2>
+    
+    <copy todir="${ucbuscaweb.output.dir}">
+      <fileset dir="${module.ucbuscaweb.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.ucbuscaweb.tests" depends="register.custom.compilers,compile.module.ucbuscaweb.production" description="compile module ucBuscaWeb; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.ucbuscaweb" description="cleanup module">
+    <delete dir="${ucbuscaweb.output.dir}"/>
+    <delete dir="${ucbuscaweb.testoutput.dir}"/>
+  </target>
+</project>

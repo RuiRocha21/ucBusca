@@ -1,0 +1,35 @@
+.body{width:100%;}
+
+#logo {
+    width:100%;
+    height:50%;
+    position: absolute;
+    top: 70px;
+
+}
+
+#btn_login{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+#pesquisa{
+    position: relative;
+    max-width: 100vw;
+    width:80%;
+    top: 500px;
+    left: 100px;
+
+}
+
+#resultados{
+    position: absolute;
+    max-width: 100vw;
+    top: 600px;
+    left: 100px;
+    height:30%;
+    width:80%;
+    border:1px solid #ccc;
+    overflow:auto;"
+}

@@ -1,0 +1,16 @@
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por admin','rui');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','zxc');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','teste007');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','web');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','web3');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','web5');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','web5');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','miguel');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','zxcv');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por zxcv','aaa');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','ty');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','teste22');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','miguel');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','miguel');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por rui','teste123');
+INSERT into ucbusca.notificacao (ucbusca.notificacao.id, ucbusca.notificacao.notificacao, ucbusca.notificacao.utilizador_nickname) VALUES (id,'Foi promovido a Admnistrador por teste123','pl');

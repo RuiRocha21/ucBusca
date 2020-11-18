@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ucBuscaWeb:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ucBuscaWeb_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ucBuscaWeb/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ucBuscaWeb" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="struts2" />
+          <element id="library" level="project" name="javax.websocket:javax.websocket-api:1.1" />
+          <element id="library" level="project" name="xwork-core-2.3.16.3" />
+          <element id="library" level="project" name="json_simple-1.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.action.excludePattern" value="/ws"/>
+
+    <package name="ucBuscaWeb" extends="struts-default">
+        <interceptors>
+            <interceptor name="ucBuscaWebInterceptor" class="webserver.interceptor.LoginInterceptors" />
+            <interceptor-stack name="ucBuscaWebStack">
+                <interceptor-ref name="ucBuscaWebInterceptor" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+
+        <default-interceptor-ref name="ucBuscaWebStack" />
+
+        <default-action-ref name="index" />
+
+        <global-results>
+            <result name="error">/jsp/erro.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error" />
+        </global-exception-mappings>
+
+        <action name="index">
+            <result>index.jsp</result>
+        </action>
+
+        <action name="paginalogin">
+            <result>/jsp/login.jsp</result>
+        </action>
+
+        <action name="fazerLogin" class="webserver.actions.LoginAction" method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/ucBusca.jsp</result>
+            <result name="error">index.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+        </action>
+
+        <action name="irParaRegisto">
+            <result>/jsp/registar.jsp</result>
+        </action>
+
+        <action name="irParaIndexar">
+            <result>/jsp/indexarUrl.jsp</result>
+        </action>
+
+        <action name="irParaPaginaEstadoSistema">
+            <result>/jsp/paginaAdmin.jsp</result>
+        </action>
+
+
+        <action name="irParaPaginaPesquisaLinks">
+            <result>/jsp/pesquisaLinks.jsp</result>
+        </action>
+
+
+        <action name="irParaPaginaPromoverUtilizadores">
+            <result>/jsp/promoverUtilizador.jsp</result>
+        </action>
+
+        <action name="irParaPaginaPesquisa">
+            <result>/jsp/pesquisaUtil.jsp</result>
+        </action>
+
+        <action name="irParaPaginaPesquisaHistorico">
+            <result>/jsp/pesquisaHistorico.jsp</result>
+        </action>
+
+        <action name="fazerRegisto" class="webserver.actions.RegistoAction" method="execute" >
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/ucBusca.jsp</result>
+            <result name="error">/jsp/erro.jsp</result>
+            <result name="login">/jsp/registar.jsp</result>
+        </action>
+
+        <action name="logout" class="webserver.actions.LoginAction" method="logout">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">index.jsp</result>
+        </action>
+
+        <action name="ucBusca" class="webserver.actions.LoginAction" method="checkLogin">
+            <result name="success">/jsp/ucBusca.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+
+        <action name="indexarUrl" class="webserver.actions.IndexarUrlAction"  method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/indexarUrl.jsp</result>
+            <result name="error">/jsp/ucBusca.jsp</result>
+        </action>
+
+        <!-- promover utilizador-->
+
+        <action name="darProvilegios" class="webserver.actions.PromoverUtilizadorAction"  method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/promoverUtilizador.jsp</result>
+            <result name="error">/jsp/ucBusca.jsp</result>
+        </action>
+
+
+        <!-- pesquisar Historico -->
+
+        <action name="pesquisaHistorico" class="webserver.actions.PesquisaHistoricoAction"  method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/pesquisaHistorico.jsp</result>
+            <result name="input">/jsp/ucBusca.jsp</result>
+        </action>
+
+
+        <!-- pesquisas utilizador-->
+
+
+        <action name="pesquisaUtilizador" class="webserver.actions.PesquisaUtilizadorAction"  method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/pesquisaUtil.jsp</result>
+            <result name="input">/jsp/ucBusca.jsp</result>
+        </action>
+
+        <action name="pesquisaSemRegisto" class="webserver.actions.PesquisasSemRegistoAction"  method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">index.jsp</result>
+            <result name="input">index.jsp</result>
+        </action>
+
+        <!-- pesquisar links-->
+
+        <action name="pesquisaLinks" class="webserver.actions.PesquisaLinksAction"  method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/pesquisaLinks.jsp</result>
+            <result name="input">/jsp/ucBusca.jsp</result>
+        </action>
+
+
+        <!--estado do sistema -->
+
+        <action name="pesquisaServidores" class="webserver.actions.EstadoSistemaAction"  method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/paginaAdmin.jsp</result>
+            <result name="input">/jsp/ucBusca.jsp</result>
+        </action>
+
+        <!-- REST FaceBook-->
+
+        <action name="connectFacebook" class="webserver.actions.LigacaoFbAction" method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/paginaAdmin.jsp</result>
+        </action>
+
+
+        <action name="loginFacebook" class="webserver.actions.LoginFaceBookAction" method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/jsp/ucBusca.jsp</result>
+            <result name="error">index.jsp</result>
+            <result name="input">/jsp/ucBusca.jsp</result>
+        </action>
+
+    </package>
+</struts>

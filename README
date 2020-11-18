@@ -1,0 +1,15 @@
+Instruções para correr o back-end
+
+1º- instalar o mysql versao 8.0.5
+
+2º- arrancar o servidor multicast da seguite forma:
+java -Djava.net.preferIPv4Stack=true -jar dataserver.jar
+
+3º- arrancar o servidor RMI
+java -Djava.net.preferIPv4Stack=true -Dsun.net.maxDatagramSockets=1024 -jar server.jar
+
+4º- arracar a aplicao do cliente em consola
+java -Djava.net.preferIPv4Stack=true -jar client.jar
+
+Instruções para arrancar o front-end
+Importar projecto usando IntelliJ deia

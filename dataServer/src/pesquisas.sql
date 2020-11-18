@@ -1,0 +1,16 @@
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'anounymous','utilizadorNaoRegistado');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'anounymous','utilizadorNaoRegistado');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'utilizadorNaoRegistado','utilizadorNaoRegistado');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'professor','utilizadorNaoRegistado');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'Outros cursos','utilizadorNaoRegistado');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'professor','utilizadorNaoRegistado');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'Outros cursos','utilizadorNaoRegistado');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'enden','rui');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'Mestrados','rui');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'palermo','utilizadorNaoRegistado');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'italiano','utilizadorNaoRegistado');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'departamento','admin');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'italiano','admin');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'italiano','admin');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'italiano','admin');
+INSERT INTO ucbusca.pesquisa (ucbusca.pesquisa.id, ucbusca.pesquisa.palavras,ucbusca.pesquisa.utilizador) VALUES (id,'italiano','utilizadorNaoRegistado');
